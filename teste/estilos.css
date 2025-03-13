@@ -1,0 +1,110 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilos para o header */
+header {
+    background-color: #110A58;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header h1 {
+    font-size: 150%;
+}
+
+#menu {
+    display: none; /* Oculta o ícone do menu por padrão */
+    cursor: pointer; /* Muda o cursor para pointer */
+}
+
+#menu-links {
+    display: flex; /* Exibe os links lado a lado */
+    gap: 20px; /* Espaço entre os links */
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+header a:hover {
+    background-color: white;
+    color: #110A58;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    top: 60px; /* Ajuste para a altura do cabeçalho */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); /* Altura total menos a altura do cabeçalho */
+    background-color: rgba(17, 10, 88, 0.9); /* Fundo semi-transparente */
+    z-index: 1001; /* Garante que o modal fique acima de tudo */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #110A58;
+    font-weight: 600;
+}
+
+.modal-content a:hover {
+    color: #493ce0;
+}
+
+/* Exibe o modal quando a classe .active é adicionada */
+.modal.active {
+    display: flex;
+}
+
+/* Estilos para telas menores que 600px */
+@media (max-width: 600px) {
+    #menu {
+        display: block; /* Exibe o ícone do menu em telas menores */
+    }
+
+    #menu-links {
+        display: none; /* Oculta os links em telas menores */
+    }
+}

@@ -1,0 +1,267 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilos para o header */
+header {
+    background-color: #110A58;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 20px;
+}
+
+#menu {
+    display: flex;
+    
+}
+
+header a {
+    display: none; /* Oculta os links no mobile */
+}
+
+/* Estilos para a seção Home */
+#Home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-top: 50px; /* Espaço para o header fixo */
+    background-image: url(./_77a3c101-e0be-499b-b7ae-0db5e56d69f2\ -\ Copiaedited.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+
+
+#Home h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    
+}
+
+#Home a {
+    text-decoration: none;
+    background-color: white;
+    font-weight:600 ;
+    color: #13034D;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logo-senar {
+    background-color: black;
+    padding: 10px;
+    border-radius: 7px;
+    width: 50%;
+    margin: 20px 15px;
+}
+
+.title img{
+    width: 20%;
+}
+
+#Home a:hover{
+    background-color: #493ce0;
+    color: white;
+}
+
+/* Estilos para a seção Aulas */
+#Aulas {
+    padding: 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#Aulas h2 {
+    margin-bottom: 20px;
+}
+
+#caixas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box a {
+    text-decoration: none;
+    background-color: #13034D;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: auto;
+    width: 30%;
+    margin-left: 35%;
+}
+
+/* Estilos para a seção Cursos Recomendados */
+#redirecionar {
+    padding: 20px;
+    background-color: #13034D;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#redirecionar h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.Cursos {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* line-height: 3rem; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#cursos-big {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.Cursos a {
+    text-decoration: none;
+    background-color: #13034D;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: #493ce0;
+    transition: all .1s ease-in;
+    transform: scale(1.02);
+}
+
+footer {
+    background: #17112d;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+  }
+
+/* Media query para telas maiores que 600px */
+@media (min-width: 601px) {
+    #caixas {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex: 1 1 calc(50% - 40px); /* 2 colunas */
+        max-width: calc(50% - 40px);
+    }
+
+    .Cursos {
+        flex: 1 1 calc(50% - 40px); /* 2 colunas */
+        max-width: calc(50% - 40px);
+        margin: 0 10px 20px;
+    }
+
+    #Home h1{
+        width: 50%;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #links {
+        display: flex;
+        transform: translateX(480%);
+    }
+
+    header a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    /* #ajuste-1{
+        transform: translateX(250px);
+    }
+
+    #ajuste-2{
+        transform: translateX(500px);
+    } */
+
+    header a:hover{
+        background-color: white;
+        color: #110A58;
+    }
+
+    header span {
+        display: none;
+    }
+}
+
+/* Media query para telas maiores que 900px */
+@media (min-width: 901px) {
+    .box {
+        flex: 1 1 calc(33.33% - 40px); /* 3 colunas */
+        max-width: calc(33.33% - 40px);
+    }
+
+    .Cursos {
+        flex: 1 1 calc(33.33% - 40px); /* 3 colunas */
+        max-width: calc(33.33% - 40px);
+    }
+}
