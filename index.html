@@ -12,14 +12,21 @@
         <nav>
             <h1>Plataforma de Cursos</h1>
             <div id="links">
-                <a class="ajuste" id="ajuste-2" href="#Home">Home</a>
-                <a class="ajuste"  href="#Aulas">Aulas</a>
-                <a  href="#redirecionar">Cursos</a>
+                <a href="#Home">Home</a>
+                <a href="#Aulas">Aulas</a>
+                <a href="#redirecionar">Cursos</a>
             </div>
-            <span>
+            <span id="menu">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
             </span>
         </nav>
+        <div id="menu-modal" class="modal">
+            <div class="modal-content">
+                <a href="#Home">Home</a>
+                <a href="#Aulas">Aulas</a>
+                <a href="#redirecionar">Cursos</a>
+            </div>
+        </div>
     </header>    
     <section id="Home">
         <h1>Aqui você vai aprender a se cadastrar em plataformas e de curso e dominar ferramentas essenciais para o seu crescimento!</h1>
@@ -31,7 +38,6 @@
             <div class="box">
                 <div class="title">
                     <img src="./Youtube_icon-icons.com_66802.svg" alt="">
-                    <!-- <img class="logo-senar" src="./logo-nova-senar-fic-senar-play.svg" alt="Logo da plataforma"> -->
                     <h4>Senar Play</h4>
                 </div>
                 <p>Apresentação da plataforma e como se matricular nos cursos. O Senar Play é uma plataforma de ensino a distância (EaD) desenvolvida pelo Serviço Nacional de Aprendizagem Rural (Senar), uma instituição brasileira voltada para a capacitação e o desenvolvimento do setor agropecuário. A plataforma oferece cursos gratuitos e de qualidade, focados em temas relacionados ao campo, como agricultura, pecuária, gestão rural, sustentabilidade e muito mais.</p>
@@ -81,5 +87,6 @@
     <footer>
         <p>&copy; 2025 Plataforma de Cursos ACE. Todos os direitos reservados à família Batalha.</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

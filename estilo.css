@@ -12,7 +12,6 @@ body {
     line-height: 1.5;
 }
 
-/* Estilos para o header */
 header {
     background-color: #110A58;
     color: white;
@@ -26,23 +25,63 @@ header {
     justify-content: space-between;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 1vh;
+    z-index: 1001; 
+}
+
+.modal-content {
+    display: flex;
+    background-color: white;
+    width: 100vw;
+    justify-content: center;
+    height: fit-content;
+    gap: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content a {
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #110A58;
+    font-weight: 600;
+    padding: 3px;
+}
+
+.modal-content a:hover {
+    background-color: #110A58;
+    color: white;
+    border-radius: 5px;
+}
+
+.modal.active {
+    display: flex;
+}
+
 nav {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between; 
     align-items: center;
-    gap: 20px;
+    padding: 0;
+    width: 100%;
 }
+
+#links {
+    display: none; 
+}
+
 
 #menu {
-    display: flex;
-    
+    display: block;
+    cursor: pointer;
 }
 
-header a {
-    display: none; /* Oculta os links no mobile */
-}
-
-/* Estilos para a seção Home */
 #Home {
     height: 100vh;
     display: flex;
@@ -52,7 +91,7 @@ header a {
     text-align: center;
     padding: 20px;
     background-color: #f4f4f4;
-    margin-top: 50px; /* Espaço para o header fixo */
+    margin-top: 50px;
     background-image: url(./_77a3c101-e0be-499b-b7ae-0db5e56d69f2\ -\ Copiaedited.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -94,7 +133,6 @@ header a {
     color: white;
 }
 
-/* Estilos para a seção Aulas */
 #Aulas {
     padding: 20px;
     background-color: #e9ecef;
@@ -135,7 +173,6 @@ header a {
     margin-left: 35%;
 }
 
-/* Estilos para a seção Cursos Recomendados */
 #redirecionar {
     padding: 20px;
     background-color: #13034D;
@@ -179,7 +216,18 @@ header a {
     margin-top: 10px;
 }
 
-a:hover {
+.Cursos a:hover {
+    background-color: #493ce0;
+    transition: all .1s ease-in;
+    transform: scale(1.02);
+}
+
+#Home a:hover{
+    background-color: #493ce0;
+    transition: all .1s ease-in;
+    transform: scale(1.02);
+}
+#Aulas a:hover{
     background-color: #493ce0;
     transition: all .1s ease-in;
     transform: scale(1.02);
@@ -192,7 +240,6 @@ footer {
     padding: 20px;
   }
 
-/* Media query para telas maiores que 600px */
 @media (min-width: 601px) {
     #caixas {
         flex-direction: row;
@@ -222,8 +269,7 @@ footer {
     }
 
     #links {
-        display: flex;
-        transform: translateX(480%);
+        display: flex; 
     }
 
     header a {
@@ -235,14 +281,6 @@ footer {
         border-radius: 7px;
     }
 
-    /* #ajuste-1{
-        transform: translateX(250px);
-    }
-
-    #ajuste-2{
-        transform: translateX(500px);
-    } */
-
     header a:hover{
         background-color: white;
         color: #110A58;
@@ -251,9 +289,12 @@ footer {
     header span {
         display: none;
     }
+
+    #menu {
+        display: none;
+    }
 }
 
-/* Media query para telas maiores que 900px */
 @media (min-width: 901px) {
     .box {
         flex: 1 1 calc(33.33% - 40px); /* 3 colunas */
