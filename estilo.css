@@ -143,6 +143,41 @@ nav {
     margin-bottom: 20px;
 }
 
+#forms {
+    text-align: center;
+    padding: 30px;
+    
+}
+
+#forms h2 {
+    color: #110A58;
+}
+
+#forms a {
+    font-weight: 600;
+    color: #110A58;
+    cursor: pointer;
+}
+
+#forms img{
+    width: 5rem;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#forms img:hover{
+    transform:scale(1.1);
+    transition: .4s ease;
+}
+
+#forms div {
+    border: 10px solid #110A58;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: white;
+}
+
 #caixas {
     display: flex;
     flex-direction: column;
